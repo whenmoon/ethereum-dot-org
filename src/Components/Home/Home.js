@@ -48,7 +48,7 @@ export default function Home() {
 					</div>
 						{eventsGroupedByRoom.map((day, i) =>
 							<div
-								onClick={() => handleClick(eventsGroupedByDays[i])}
+								onClick={() => handleClick(events)}
 							>
 								<Room
 									room={["Magenta Room"]}
