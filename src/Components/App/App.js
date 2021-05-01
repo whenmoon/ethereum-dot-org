@@ -1,11 +1,11 @@
 import './App.css';
 import usePretalx from '../../Hooks/usePretalx';
 import moment from 'moment';
-import { groupBy } from 'lodash'
+import { groupBy } from 'lodash';
+import Loading from '../Loader/Loader';
 
-
-function App() {
-	const events = usePretalx()
+export default function App() {
+	const events = usePretalx();
 	console.log('events', events);
 	if (events.results) {
 		const monthName = item => moment(item.slot.start, 'YYYY-MM-DD').format('DDD');
@@ -13,10 +13,14 @@ function App() {
 		console.log('result', result)
 	}
 	return (
-		<div className="App">
-
+		<div
+			className="App"
+			style={{
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+			}}>
+			{!events.length && <Loading />}
 		</div>
 	);
 }
-
-export default App;
