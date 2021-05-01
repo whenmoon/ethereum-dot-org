@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Event(props) {
-	console.log('%c props', 'color: green;', props);
 	return (
 		<div className="App" style={{ margin: 30 }}>
 			Events:
