@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Day(props) {
+export default function Room(props) {
 	return (
 		<div style={{ padding: 20 }}>
-			{props.day}
+			{props.room}
 		</div>
 	)
 }
