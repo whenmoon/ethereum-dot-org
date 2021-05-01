@@ -4,8 +4,8 @@ export default function Event(props) {
 	return (
 		<div className="App" style={{ margin: 30 }}>
 			Events:
-			{props.location.state.map((el) =>
-				<>
+			{props.location.state.map((el, i) =>
+				<div key={i}>
 					<div style={{ fontSize: 24 }}>
 						Event:
 			    </div>
@@ -14,7 +14,7 @@ export default function Event(props) {
 						{JSON.stringify(el.description)}
 						{JSON.stringify(el.slot.start)}
 					</div>
-				</>
+				</div>
 			)}
 		</div>
 	);

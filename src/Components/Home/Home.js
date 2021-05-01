@@ -35,6 +35,7 @@ export default function Home() {
 							<div
 								style={{ border: '2px blue solid', margin: 10 }}
 								onClick={() => handleClick(eventsGroupedByDays[i])}
+								key={i}
 							>
 								<Day
 									day={String(day)}
@@ -49,6 +50,7 @@ export default function Home() {
 						{eventsGroupedByRoom.map((day, i) =>
 							<div
 								onClick={() => handleClick(events)}
+								key={i}
 							>
 								<Room
 									room={["Magenta Room"]}
